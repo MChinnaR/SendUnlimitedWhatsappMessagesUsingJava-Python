@@ -26,11 +26,9 @@ public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "E:/Downlodes/chromedriver.exe");
 		System.out.println("Please Wait.......");
 		WebDriver driver = new ChromeDriver();
-
-		System.out.println("Fetching IP address.....");
 		driver.get("https://web.whatsapp.com/");
-		Thread.sleep(10000);
-		driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys("Anil Bharath Dvp");
+		Thread.sleep(5000); // if not inserting with the time increase the time
+		driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys("Enter name as per ur saved in  phone");
 		driver.findElement(By.xpath("//span[@class='matched-text i0jNr']")).click();
 		for (int i = 0; i < 100; i++) {
 			driver.findElement(By.xpath("//div[@title='Type a message']")).sendKeys("hello");
